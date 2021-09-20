@@ -25,14 +25,6 @@ void draw(){
     if(px>830)
       px = -30;
     t++;
-    if (mousePressed == true &&lightning == false) {
-      lightning = true;
-      startx = mouseX;
-      starty = 0;
-      endX = mouseX;
-      lightning();
-      reset();
-    }
   }
   else{
    t2 ++; 
@@ -40,7 +32,6 @@ void draw(){
 }
 
 void mousePressed(){
-  /*
   if (lightning == false) {
     lightning = true;
     startx = mouseX;
@@ -49,7 +40,6 @@ void mousePressed(){
     lightning();
     reset();
   }
-  */
 }
 
 void backdrop(){
