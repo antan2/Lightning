@@ -18,7 +18,7 @@ void setup(){
 
 void draw(){
   if(t2 > 25){
-    //lightning = false;
+    lightning = false;
     person(px);
     backdrop();
     px+= score + 1;
@@ -32,14 +32,14 @@ void draw(){
 }
 
 void mousePressed(){
-  //if (lightning == false) {
-    //lightning = true;
+  if (lightning == false) {
+    lightning = true;
     startx = mouseX;
     starty = 0;
     endX = mouseX;
-    lightning();
+    lightningStrike();
     reset();
-  //}
+  }
 }
 
 void backdrop(){
@@ -71,7 +71,7 @@ void person(int x){
   line(x, 630, x - 25*sin(t/8.0), 660);
 }
 
-void lightning(){
+void lightningStrike(){
   stroke(255, 255, 0);
   for(int y = 0; y <= 700; y += 0){ //+= 0 because it will be adjusted later, although, I could have used a while loop instead, but not declaring a variable is nice
     endx = (int)(startx + Math.random()*25 - 5);
@@ -100,5 +100,6 @@ void reset(){
   t2 = 0;
   px = -25;
 }
+
 
 
