@@ -18,7 +18,7 @@ void setup(){
 
 void draw(){
   if(t2 > 25){
-    lightning = false;
+    //lightning = false;
     person(px);
     backdrop();
     px+= score + 1;
@@ -32,14 +32,14 @@ void draw(){
 }
 
 void mousePressed(){
-  if (lightning == false) {
-    lightning = true;
+  //if (lightning == false) {
+    //lightning = true;
     startx = mouseX;
     starty = 0;
     endX = mouseX;
     lightning();
     reset();
-  }
+  //}
 }
 
 void backdrop(){
@@ -100,6 +100,5 @@ void reset(){
   t2 = 0;
   px = -25;
 }
-
 
 
